@@ -11,6 +11,7 @@
     "test": "vitest --coverage"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^8.5.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",

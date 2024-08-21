@@ -12,6 +12,38 @@ export default defineNuxtConfig({
     },
   },
 
+  modules: ["@nuxt/test-utils/module", "@nuxtjs/i18n"],
+
+  i18n: {
+    strategy: "prefix",
+    defaultLocale: "en",
+    locales: [
+      {
+        code: "en",
+        language: "en-US",
+        name: "English",
+        file: "en.json",
+      },
+      {
+        code: "ru",
+        language: "ru-RU",
+        name: "Русский язык",
+        file: "ru.json",
+      },
+      {
+        code: "uz",
+        language: "uz-UZ",
+        name: "O'zbek tili",
+        file: "uz.json",
+      },
+    ],
+    lazy: true,
+    langDir: "locales/",
+    vuei18n: {
+      fallbackLocale: "en",
+    },
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -19,6 +51,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/test-utils/module"],
   compatibilityDate: "2024-08-21",
 });
