@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/test-utils/module", "@nuxtjs/i18n"],
+  modules: ["@nuxt/test-utils/module", "@nuxtjs/i18n", "nuxt-swiper"],
 
   i18n: {
     strategy: "prefix",

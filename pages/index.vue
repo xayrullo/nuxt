@@ -13,13 +13,59 @@
     </button>
     {{ $t("welcome") }}
   </div>
+  <div id="swiper">
+    <Swiper
+      :slides-per-view="1"
+      :space-between="10"
+      loop="true"
+      :autoplay="{ delay: 2500, disableOnInteraction: true }"
+      :modules="[
+        SwiperAutoplay,
+        SwiperEffectCreative,
+        SwiperPagination,
+        SwiperNavigation,
+      ]"
+      :pagination="{
+        type: 'progressbar',
+      }"
+      :navigation="true"
+    >
+      <SwiperSlide>
+        <img
+          src="../public/images/banner1.jpg"
+          alt="Image 1"
+          class="w-full h-96 object-cover"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img
+          src="../public/images/banner2.avif"
+          alt="Image 2"
+          class="w-full h-96 object-cover"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img
+          src="../public/images/banner3.jpg"
+          alt="Image 3"
+          class="w-full h-96 object-cover"
+        />
+      </SwiperSlide>
+    </Swiper>
+  </div>
 </template>
 <script setup lang="ts">
 import type { LocaleObject } from "@nuxtjs/i18n";
+
 const i18n = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
-console.log(i18n.locale.value);
+// const banners = ref([
+//   {
+//     u
+//   }
+// ])
+
 const locales = computed(() => i18n.locales.value);
 
 function changeLocale(loc: LocaleObject) {
