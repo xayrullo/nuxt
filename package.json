@@ -11,12 +11,16 @@
     "test": "vitest --coverage"
   },
   "dependencies": {
+    "@nuxtjs-alt/axios": "^1.1.0",
     "@nuxtjs/i18n": "^8.5.0",
     "@vitejs/plugin-vue": "^5.0.4",
+    "axios": "^1.7.4",
     "nuxt": "^3.11.2",
     "nuxt-swiper": "^1.2.2",
+    "pinia": "^2.2.2",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vue3-cookies": "^1.0.6"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.12.1",
