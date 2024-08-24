@@ -12,16 +12,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    "@nuxt/test-utils/module",
-    "@nuxtjs/i18n",
-    "nuxt-swiper",
-    "@nuxtjs-alt/axios",
-  ],
-
-  axios: {
-    baseURL: process.env.API_URL,
-  },
+  modules: ["@nuxt/test-utils/module", "@nuxtjs/i18n", "nuxt-swiper"],
 
   i18n: {
     strategy: "prefix",

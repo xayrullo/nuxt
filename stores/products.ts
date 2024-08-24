@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 
 import type { IProduct } from "~/types/product";
 import type { IResponse } from "~/types";
-import { $api } from "~/api";
+// import { $api } from "~/api";
 
 const PRODUCTS_STORE = "productsStore";
 
@@ -11,18 +11,17 @@ export const useCompaniesStore = defineStore(PRODUCTS_STORE, () => {
   const products = ref<IProduct[]>([]);
 
   function fetchProducts() {
-    return new Promise<IProduct[]>((resolve, reject) => {
-      const session = sessionStorage.getItem(PRODUCTS_STORE);
-      return $api.product
-        .getAll()
-        .then((res) => {
-          products.value = res.products;
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+    // return new Promise<IProduct[]>((resolve, reject) => {
+    //   return $api.product
+    //     .getAll()
+    //     .then((res) => {
+    //       products.value = res.products;
+    //       resolve(res.products);
+    //     })
+    //     .catch((err) => {
+    //       reject(err);
+    //     });
+    // });
   }
 
   return {

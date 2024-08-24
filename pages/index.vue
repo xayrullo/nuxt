@@ -17,7 +17,7 @@
     <Swiper
       :slides-per-view="1"
       :space-between="10"
-      loop="true"
+      :loop="true"
       :autoplay="{ delay: 2500, disableOnInteraction: true }"
       :modules="[
         SwiperAutoplay,
@@ -57,14 +57,16 @@
 <script setup lang="ts">
 import type { LocaleObject } from "@nuxtjs/i18n";
 
+// import { useProductsStore } from "../stores/products";
+
 const i18n = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
-// const banners = ref([
-//   {
-//     u
-//   }
-// ])
+// const productsStore = useProductsStore();
+
+// console.log("ProductsStore", productsStore);
+
+// async function fetchData() {}
 
 const locales = computed(() => i18n.locales.value);
 
